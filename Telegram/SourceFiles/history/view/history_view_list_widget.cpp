@@ -1646,6 +1646,9 @@ bool ListWidget::showCopyRestrictionForSelected() {
 }
 
 bool ListWidget::hasSelectRestriction() const {
+
+	return false;
+
 	return _delegate->listSelectRestrictionType()
 		!= CopyRestrictionType::None;
 }

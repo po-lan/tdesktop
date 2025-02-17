@@ -585,6 +585,9 @@ void HistoryInner::setupSwipeReply() {
 }
 
 bool HistoryInner::hasSelectRestriction() const {
+	
+	return false;
+
 	if (!_sharingDisallowed.current()) {
 		return false;
 	} else if (const auto chat = _peer->asChat()) {
@@ -2978,6 +2981,9 @@ void HistoryInner::showContextMenu(QContextMenuEvent *e, bool showFromTouch) {
 }
 
 bool HistoryInner::hasCopyRestriction(HistoryItem *item) const {
+
+	return false;
+
 	return !_peer->allowsForwarding() || (item && item->forbidsForward());
 }
 
