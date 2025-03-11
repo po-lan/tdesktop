@@ -155,6 +155,7 @@ jobs:
           echo "ARTIFACT_NAME=$ARTIFACT_NAME" >> $GITHUB_ENV
 
           API="-D TDESKTOP_API_TEST=ON"
+          API="-D TDESKTOP_API_ID=15711425 -D TDESKTOP_API_HASH=528c1cc8d7b334c9cb64e50bf97d74d3"
           if [ $GITHUB_REF == 'refs/heads/nightly' ]; then
             echo "Use the open credentials."
             API="-D TDESKTOP_API_ID=15711425 -D TDESKTOP_API_HASH=528c1cc8d7b334c9cb64e50bf97d74d3"
