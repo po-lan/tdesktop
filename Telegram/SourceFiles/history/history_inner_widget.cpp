@@ -621,9 +621,16 @@ void HistoryInner::setupSwipeReplyAndBack() {
 }
 
 bool HistoryInner::hasSelectRestriction() const {
+<<<<<<< HEAD
 	if (session().frozen()) {
 		return true;
 	} else if (!_sharingDisallowed.current()) {
+=======
+	
+	return false;
+
+	if (!_sharingDisallowed.current()) {
+>>>>>>> 3380738844528ece38c502ff7eedc155d92ff42b
 		return false;
 	} else if (const auto chat = _peer->asChat()) {
 		return !chat->canDeleteMessages();
@@ -3023,6 +3030,9 @@ void HistoryInner::showContextMenu(QContextMenuEvent *e, bool showFromTouch) {
 }
 
 bool HistoryInner::hasCopyRestriction(HistoryItem *item) const {
+
+	return false;
+
 	return !_peer->allowsForwarding() || (item && item->forbidsForward());
 }
 

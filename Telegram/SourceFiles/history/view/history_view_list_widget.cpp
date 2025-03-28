@@ -1646,9 +1646,17 @@ bool ListWidget::showCopyRestrictionForSelected() {
 }
 
 bool ListWidget::hasSelectRestriction() const {
+<<<<<<< HEAD
 	return session().frozen()
 		|| (_delegate->listSelectRestrictionType()
 			!= CopyRestrictionType::None);
+=======
+
+	return false;
+
+	return _delegate->listSelectRestrictionType()
+		!= CopyRestrictionType::None;
+>>>>>>> 3380738844528ece38c502ff7eedc155d92ff42b
 }
 
 Element *ListWidget::lookupItemByY(int y) const {

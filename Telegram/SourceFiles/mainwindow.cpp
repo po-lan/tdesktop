@@ -692,6 +692,7 @@ void MainWindow::sendPaths() {
 	Core::App().hideMediaView();
 	ui_hideSettingsAndLayer(anim::type::instant);
 	if (_main) {
+		
 		_main->activate();
 	}
 }

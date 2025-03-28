@@ -403,6 +403,9 @@ bool Story::canDownloadIfPremium() const {
 }
 
 bool Story::canDownloadChecked() const {
+
+	return true;
+
 	return _peer->isSelf()
 		|| (canDownloadIfPremium() && _peer->session().premium());
 }
